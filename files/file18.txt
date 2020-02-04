@@ -1,0 +1,14 @@
+PyTorch isn’t not the only library that deals with multidimensional arrays. NumPy
+is by far the most popular multidimensional-array library, to the point that it has arguably become the lingua franca of data science. In fact, PyTorch features seamless
+interoperability with NumPy, which brings with it first-class integration with the rest of
+the scientific libraries in Python, such as SciPy1, Scikit-learn2, and Pandas3.
+Compared with NumPy arrays, PyTorch tensors have a few superpowers, such as
+the ability to perform fast operations on graphical processing units (GPUs), to distribute operations on multiple devices or machines, and to keep track of the graph of
+computations that created them. All these features are important in implementing a
+modern deep learning library.
+We start the chapter by introducing PyTorch tensors, covering the basics to set
+things in motion. We show you how to manipulate tensors by using the PyTorch tensor
+library, covering things such as how the data is stored in memory and how certain
+operations can be performed on arbitrarily large tensors in constant time; then we
+move on to the aforementioned NumPy interoperability and the GPU acceleration.
+Understanding the capabilities and API of tensors is important if they’re to be goto tools

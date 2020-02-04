@@ -1,0 +1,19 @@
+libraries like PyTorch that use immediate execution differ from deferred-execution
+frameworks, even though the underlying math is the same for both types.
+The fundamental building block of a neural network is a neuron. Neurons are
+strung together in large numbers to form the network. You see a typical mathematical
+expression for a single neuron in the first row of figure 1.2: o = tanh(w * x + b). As
+we explain the execution modes in the following figures, keep these facts in mind:
+x is the input to the single-neuron computation.
+w and b are the parameters or weights of the neuron and can be changed as
+
+needed.
+To update the parameters (to produce output that more closely matches what
+we desire), we assign error to each of the weights via backpropagation and then
+tweak the weights accordingly.
+Backpropagation requires computing the gradient of the output with respect to
+the weights (among other things).
+We use automatic differentiation to compute the gradient automatically, saving
+us the trouble of writing the calculations by hand.
+In figure 1.2, the neuron gets compiled into a symbolic graph in which each node represents individual operations (second row), using placeholders for inputs and outputs. Then the graph is evaluated numerically (third row) when concrete numbers
+are plugged into the placeholders (in this case, the numbers are the values stored in w,

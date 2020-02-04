@@ -1,0 +1,11 @@
+Now take a look at what you did here. After importing the torch module, you called a
+function that creates a (one-dimensional) tensor of size 3 filled with the value 1.0.
+You can access an element by using its 0-based index or assign a new value to it.
+Although on the surface, this example doesn’t differ much from a list of number
+objects, under the hood, things are completely different. Python lists or tuples of numbers are collections of Python objects that are individually allocated in memory, as
+shown on the left side of figure 2.3. PyTorch tensors or NumPy arrays, on the other
+hand, are views over (typically) contiguous memory blocks containing unboxed
+C numeric types, not Python objects. In this case, 32 bits (4 bytes) float, as you see on
+the right side of figure 2.3. So a 1D tensor of 1 million float numbers requires 4 million
+contiguous bytes to be stored, plus a small overhead for the metadata (dimensions,
+numeric type, and so on).

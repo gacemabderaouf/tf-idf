@@ -1,0 +1,16 @@
+Why PyTorch?
+As we’ve said, deep learning allows you to carry out a wide range of complicated
+tasks—such as performing machine translation, playing strategy games, and identifying objects in cluttered scenes—by exposing your model to illustrative examples. To
+do so in practice, you need tools that are flexible so that they can be adapted to your
+specific problem and efficient, to allow training to occur over large amounts of data in
+reasonable times. You also need the trained network to perform correctly in the presence of uncertainty in the inputs. In this section, we take a look at some of the reasons
+why we decided to use PyTorch.
+PyTorch is easy to recommend because of its simplicity. Many researchers and practitioners find it easy to learn, use, extend, and debug. It’s Pythonic, and although (like
+any complicated domain) it has caveats and best practices, using the library generally
+feels familiar to developers who have used Python previously.
+For users who are familiar with NumPy arrays, the PyTorch Tensor class will be
+immediately familiar. PyTorch feels like NumPy, but with GPU acceleration and automatic computation of gradients, which makes it suitable for calculating backward pass
+data automatically starting from a forward expression.
+The Tensor API is such that the additional features of the class relevant to deep
+learning are unobtrusive; the user is mostly free to pretend that those features don’t
+exist until need for them arises.

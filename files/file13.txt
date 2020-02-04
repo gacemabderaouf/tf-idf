@@ -1,0 +1,15 @@
+reduced by using multiple GPUs on the same machine and even further by using clusters of machines equipped with multiple GPUs. These setups are less prohibitive to
+access than they sound thanks to the offerings of cloud computing providers. DAWNBench4 is an interesting initiative from Stanford University aimed at providing benchmarks on training time and cloud computing costs related to common deep learning
+tasks on publicly available data sets.
+If you have a GPU around, great. Otherwise, we suggest checking out the offerings
+of the various cloud platforms, many of which offer GPU-enabled Jupyter notebooks
+with PyTorch preinstalled, often with a free quota.
+Last consideration: the operating system (OS). PyTorch has supported Linux and
+macOS from its first release and gained Windows support during 2018. Because current
+Apple laptops don’t include GPUs that support CUDA, the precompiled macOS packages for PyTorch are CPU-only. We try to avoid assuming that you run a particular OS;
+scripts’ command lines should convert to a Windows-compatible form readily. For convenience, whenever possible we list code as though it’s running on a Jupyter Notebook.
+For installation information, please see the Getting Started guide on the official
+website.5 We suggest that Windows users install with Anaconda or Miniconda. Other
+operating systems, such as Linux, typically have a wider variety of workable options,
+with Pip being one of the most common installers. Experienced users, of course, are
+free to install packages in the way that’s most compatible with their preferred development environments.

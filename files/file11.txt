@@ -1,0 +1,18 @@
+In the simplest case, the model will be running the required calculations on the
+local CPU or on a single GPU, so when the training loop has the data, computation
+can start immediately. It’s more common, however, to want to use specialized hardware such as multiple GPUs or to have multiple machines contribute their resources
+to training the model. In those cases, torch.nn.DataParallel and torch.distributed can be employed to leverage the additional hardware available.
+When you have results from running your model on the training data,
+torch.optim provides standard ways of updating the model so that the output starts to
+more closely resemble the answers specified in the training data.
+As mentioned earlier, PyTorch defaults to an immediate execution model (eager
+mode). Whenever an instruction involving PyTorch is executed by the Python interpreter, the corresponding operation is immediately carried out by the underlying C++
+or CUDA implementation. As more instructions operate on tensors, more operations
+are executed by the backend implementation. This process is as fast as it typically can
+be on the C++ side, but it incurs the cost of calling that implementation through
+Python. This cost is minute, but it adds up.
+To bypass the cost of the Python interpreter and offer the opportunity to run models independently from a Python runtime, PyTorch also provides a deferred execution
+model named TorchScript. Using TorchScript, PyTorch can serialize a set of instructions that can be invoked independently from Python. You can think of this model as
+being a virtual machine with a limited instruction set specific to tensor operations.
+Besides not incurring the costs of calling into Python, this execution mode gives
+PyTorch the opportunity to Just in Time (JIT) transform sequences of known operations into more efficient fused operations. These features are the basis of the production deployment capabilities of PyTorch.

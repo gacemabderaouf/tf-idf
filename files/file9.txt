@@ -1,0 +1,26 @@
+PyTorch has the batteries included
+We’ve already hinted at a few components of PyTorch. Now we’ll take some time to
+formalize a high-level map of the main components that form PyTorch.
+First, PyTorch has the Py from Python, but there’s a lot of non-Python code in it. For
+performance reasons, most of PyTorch is written in C++ and CUDA3, a C++-like language from NVIDIA that can be compiled to run with massive parallelism on NVIDIA
+GPUs. There are ways to run PyTorch directly from C. One of the main motivations
+for this capability is providing a reliable strategy for deploying models in production.
+Most of the time, however, you’ll interact with PyTorch from Python, building models,
+training them, and using the trained models to solve problems. Depending on a given
+use case’s requirements for performance and scale, a pure-Python solution can be sufficient to put models into production. It can be perfectly viable to use a Flask web
+server to wrap a PyTorch model using the Python API, for example.
+Indeed, the Python API is where PyTorch shines in term of usability and integration with the wider Python ecosystem. Next, we take a peek at the mental model of
+PyTorch.
+At its core, PyTorch is a library that provides multidimensional arrays, called tensors in
+PyTorch parlance, and an extensive library of operations on them is provided by the
+torch module. Both tensors and related operations can run on the CPU or GPU. Running on the GPU results in massive speedups compared with CPU (especially if you’re
+willing to pay for a top-end GPU), and with PyTorch doing so, it doesn’t require more
+than an additional function call or two. The second core thing that PyTorch provides
+allows tensors to keep track of the operations performed on them and to compute
+derivatives of an output with respect to any of its inputs analytically via backpropagation.
+This capability is provided natively by tensors and further refined in torch.autograd.
+We could argue that by having tensors and the autograd-enabled tensor standard
+library, PyTorch could be used for more than neural networks, and we’d be correct:
+PyTorch can be used for physics, rendering, optimization, simulation, modeling, and
+so on. We’re likely to see PyTorch being used in creative ways across the spectrum of
+scientific applications.

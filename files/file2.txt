@@ -1,0 +1,17 @@
+Though we stress the practical applications, we also believe that providing an
+accessible introduction to foundational deep learning tools like PyTorch is more than
+a way to facilitate the acquisition of new technical skills. It is also a step toward equipping a new generation of scientists, engineers, and practitioners from a wide range of
+disciplines with a working knowledge of the tools that will be the backbone of many
+software projects during the decades to come.
+To get the most out of this book, you need two things:
+Some experience programming in Python—We’re not going to pull any punches on
+that one: you’ll need to be up on Python data types, classes, floating-point numbers, and the like.
+Willingness to dive in and get your hands dirty—It’ll be much easier for you to learn
+if you follow along with us.
+Deep learning is a huge space. In this book, we’ll be covering a tiny part of that
+space—specifically, using PyTorch for smaller-scope projects. Most of the motivating
+examples use image processing of 2D and 3D data sets. We focus on practical PyTorch,
+with the aim of covering enough ground to allow you to solve realistic problems with
+deep learning or explore new models as they pop up in research literature. A great
+resource for the latest publications related to deep learning research is the ArXiV
+public preprint repository, hosted at https://arxiv.org.1

@@ -1,0 +1,19 @@
+But PyTorch is first and foremost a deep learning library, and as such, it provides all
+the building blocks needed to build and train neural networks. Figure 1.4 shows a standard setup that loads data, trains a model, and then deploys that model to production.
+The core PyTorch modules for building neural networks are located in torch.nn,
+which provides common neural network layers and other architectural components.
+Fully connected layers, convolutional layers, activation functions, and loss functions
+can all be found here. These components can be used to build and initialize the
+untrained model shown in the center of figure 1.4.
+
+Figure 1.4
+
+Basic high-level structure of a PyTorch project, with data loading, training, and deployment to production
+
+To train this model, you need a few things (besides the loop itself, which can be a standard Python for loop): a source of training data, an optimizer to adapt the model to
+the training data, and a way to get the model and data to the hardware that will be performing the calculations needed for training the model.
+Utilities for data loading and handling can be found in torch.util.data. The two
+main classes you’ll work with are Dataset, which acts as the bridge between your custom data (in whatever format it might be in), and a standardized PyTorch Tensor. The
+other class you’ll see a lot of is DataLoader, which can spawn child processes to load
+data from a Dataset in the background so that it’s ready and waiting for the training
+loop as soon as the loop can use it.

@@ -1,0 +1,14 @@
+Often in libraries that use this form of function definition, the operations of squaring
+a and b, adding, and taking the square root aren’t recorded as high-level Python byte
+code. Instead, the point usually is to compile the expression into a static computation
+graph (a graph of basic operations) that has some advantage over pure Python (such
+as compiling the math directly to machine code for performance reasons).
+The fact that the computation graph is built in one place and used in another
+makes debugging more difficult, because exceptions often lack specificity about what
+went wrong and Python debugging tools don’t have any visibility into the intermediate
+states of the data. Also, static graphs usually don’t mix well with standard Python flow
+control: they’re de-facto domain-specific languages implemented on top of a host language (Python in this case).
+Next, we take a more concrete look at the differences between immediate and
+deferred execution, specifically regarding issues that are relevant to neural networks.
+We won’t be teaching these concepts in any depth here, instead giving you a high-level
+introduction to the terminology and the relationships among these concepts. Understanding those concepts and relationships lays the groundwork for understand how

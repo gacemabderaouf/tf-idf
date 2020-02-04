@@ -1,0 +1,14 @@
+Introducing deep learning and the PyTorch library
+
+At this point, you’ll need to start the notebook server from the root directory of
+the code checkout from GitHub. How starting the server looks depends on the details
+of your operating system and on how and where you installed Jupyter. If you have
+questions, feel free to ask on our forums.7 When the notebook server starts, your
+default browser pops up, showing a list of local notebook files.
+Jupyter Notebooks are powerful tools for expressing and investigating ideas
+through code. Although we think that they make a good fit with our use case, they’re
+not for everyone. We would argue that it’s important to focus on removing friction
+and minimizing cognitive overhead, which is going to be different for everyone. Use
+what you like during your experimentation with PyTorch.
+You can find full working code for the listings in this book in our repository on
+GitHub.8

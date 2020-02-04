@@ -1,0 +1,14 @@
+Using Jupyter Notebooks
+We’re going to assume that you have PyTorch and the other dependencies installed
+and have verified that things are working. We’re going to be making heavy use of Jupyter Notebooks for example code. A Jupyter Notebook shows itself as a page in the
+browser through which you can run code interactively. The code gets evaluated by a
+kernel, a process running on a server that’s ready to receive code to execute and send
+back the results, which are rendered inline on the page. A notebook maintains the
+state of the kernel, such as variables defined during the evaluation of code, in memory
+until it’s terminated or restarted. The fundamental unit with which you interact with a
+notebook is a cell, a box on the page where you can type code and have the kernel
+evaluate it (by choosing the menu item or pressing Shift-Enter). You can add multiple
+cells to a notebook, and the new cells see the variables you created in the earlier cells.
+The value returned by the last line of a cell is printed below the cell after execution,
+and the same goes for plots. By mixing source code, results of evaluations, and Markdown-formatted text cells, you can generate beautiful interactive documents. You can
+read everything about Jupyter Notebooks on the project website.6

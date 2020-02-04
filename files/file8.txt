@@ -1,0 +1,22 @@
+be invoked according to conditions on the outputs of the preceding nodes, for example, without a need for such conditions to be represented in the graph itself—a distinct advantage over static graph approaches.
+The major frameworks are converging toward supporting both modes of operation. PyTorch 1.0 gained the ability to record the execution of a model in a static computation graph or define it through a precompiled scripting language, with the goal
+of improved performance and ease of putting the model into production. TensorFlow
+has also gained “eager mode,” a new define-by-run API, increasing the library’s flexibility as we have discussed.
+
+
+The deep learning competitive landscape
+Although all analogies are flawed, it seems that the release of PyTorch 0.1 in January
+2017 marked the transition from a Cambrian Explosion–like proliferation of deep
+learning libraries, wrappers, and data exchange formats to an era of consolidation
+and unification.
+The deep learning landscape has been moving so quickly lately that by
+
+At the time of PyTorch’s first beta release
+Theano and TensorFlow were the premiere low-level deferred-execution libraries.
+Lasagne and Keras were high-level wrappers around Theano, with Keras wrapping TensorFlow and CNTK as well.
+Caffe, Chainer, Dynet, Torch (the Lua-based precursor to PyTorch), mxnet,
+CNTK, DL4J, and others filled various niches in the ecosystem.
+In the roughly two years that followed, the landscape changed dramatically. The community has largely consolidated behind PyTorch or TensorFlow, with the adoption of
+other libraries dwindling or filling specific niches:
+Theano, one of the first deep learning frameworks, has ceased active development.
+TensorFlow

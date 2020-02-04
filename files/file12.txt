@@ -1,0 +1,15 @@
+Hardware for deep learning
+Running a pretrained network on new data is within the capabilities of any recent laptop or personal computer. Even retraining a small portion of a pretrained network to
+specialize it on a new data set doesn’t necessarily require specialized hardware. You
+can follow along with this book on a standard personal computer or laptop. We anticipate, however, that completing a full training run for more-advanced examples will
+require a CUDA-capable graphical processing unit (GPU), such as a GPU with 8GB of
+RAM (we suggest an NVIDIA GTX 1070 or better). But those parameters can be
+adjusted if your hardware has less RAM available.
+To be clear: such hardware isn’t mandatory if you’re willing to wait, but running on a
+GPU cuts training time by at least an order of magnitude (and usually is 40 to 50 times
+faster). Taken individually, the operations required to compute parameter updates are
+fast (from fractions of a second to a few seconds) on modern hardware such as a typical
+laptop CPU. The issue is that training involves running these operations over and over,
+many times, incrementally updating the network parameters to minimize training error.
+Moderately large networks can take hours to days to train from scratch on large,
+real-world data sets on workstations equipped with good GPUs. That time can be

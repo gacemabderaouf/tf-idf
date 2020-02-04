@@ -1,0 +1,13 @@
+What is PyTorch?
+PyTorch is a library for Python programs that facilitates building deep learning projects. It emphasizes flexibility and allows deep learning models to be expressed in idiomatic Python. This approachability and ease of use found early adopters in the
+research community, and in the years since the library’s release, it has grown into one
+of the most prominent deep learning tools for a broad range of applications.
+PyTorch provides a core data structure, the Tensor, a multidimensional array that
+has many similarities with NumPy arrays. From that foundation, a laundry list of features was built to make it easy to get a project up and running, or to design and train
+investigation into a new neural network architecture. Tensors accelerate mathematical
+operations (assuming that the appropriate combination of hardware and software is
+present), and PyTorch has packages for distributed training, worker processes for efficient data loading, and an extensive library of common deep learning functions.
+As Python is for programming, PyTorch is both an excellent introduction to deep
+learning and a tool usable in professional contexts for real-world, high-level work.
+We believe that PyTorch should be the first deep learning library you learn.
+Whether it should be the last is a decision that we’ll leave to you.

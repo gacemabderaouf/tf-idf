@@ -1,0 +1,17 @@
+It’s not unusual for simple Python programs that deal with vectors of numbers, such as
+the coordinates of a 2D line, to use Python lists to store the vector. This practice can
+be suboptimal, however, for several reasons:
+Numbers in Python are full-fledged objects. Whereas a floating-point number might
+take only 32 bits to be represented on a computer, Python boxes them in a fullfledged Python object with reference counting and so on. This situation isn’t a
+problem if you need to store a small number of numbers, but allocating millions of such numbers gets inefficient.
+Lists in Python are meant for sequential collections of objects. No operations are
+defined for, say, efficiently taking the dot product of two vectors or summing
+vectors. Also, Python lists have no way of optimizing the layout of their content
+in memory, as they’re indexable collections of pointers to Python objects (of
+any kind, not numbers alone). Finally, Python lists are one-dimensional, and
+although you can create lists of lists, again, this practice is inefficient.
+The Python interpreter is slow compared with optimized, compiled code. Performing
+mathematical operations on large collections of numerical data can be must
+faster using optimized code written in a compiled, low-level language like C.
+For these reasons, data science libraries rely on NumPy or introduce dedicated data
+structures such as PyTorch tensors that provide efficient low-level implementations of

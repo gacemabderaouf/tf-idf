@@ -1,0 +1,13 @@
+bolically by automatic differentiation, which traverses the graph backward and multiplies the gradients at individual nodes (fourth row). The corresponding mathematical
+expression is shown in the fifth row.
+One of the major competing deep learning frameworks is TensorFlow, which has a
+graph mode that uses a similar kind of deferred execution. Graph mode is the default
+mode of operation in TensorFlow 1.0. By contrast, PyTorch sports a define-by-run
+dynamic graph engine in which the computation graph is built node by node as the
+code is eagerly evaluated.
+The top half of figure 1.3 shows the same calculation running under a dynamic
+graph engine. The computation is broken into individual expressions, which are greedily evaluated as they’re encountered. The program has no advance notion of the interconnection between computations. The bottom half of the figure shows the behind-thescenes construction of a dynamic computation graph for the same expression. The
+expression is still broken into individual operations, but here those operations are
+eagerly evaluated, and the graph is built incrementally. Automatic differentiation is
+achieved by traversing the resulting graph backward, similar to static computation
+graphs. Note that this does not mean dynamic graph libraries are inherently more capa-

@@ -1,0 +1,21 @@
+The deep learning revolution
+In this section, we take a step back and provide some context for where PyTorch fits
+into the current and historical landscape of deep learning tools.
+Until the late 2000s, the broader class of systems that fell into the category
+“machine learning” relied heavily on feature engineering. Features are transformations of
+input data resulting in numerical features that facilitate a downstream algorithm, such
+as a classifier, to produce correct outcomes on new data. Feature engineering aims to
+take the original data and come up with representations of the same data that can be fed
+to an algorithm to solve a problem. To tell ones from zeros in images of handwritten
+digits, for example, you’d come up with a set of filters to estimate the direction of
+edges over the image and then train a classifier to predict the correct digit, given a distribution of edge directions. Another useful feature could be the number of enclosed
+holes in a zero, an eight, or particularly loopy twos.
+Deep learning, on the other hand, deals with finding such representations automatically, from raw data, to perform a task successfully. In the ones-versus-zeros example, filters would be refined during training by iteratively looking at pairs of examples
+and target labels. This isn’t to say that feature engineering has no place in deep learning; developers often need to inject some form of knowledge into a learning system.
+The ability of a neural network to ingest data and extract useful representations on
+the basis of examples, however, is what makes deep learning so powerful. The focus of
+deep learning practitioners is not so much on handcrafting those representations but
+on operating on a mathematical entity so that it discovers representations from the
+training data autonomously. Often, these automatically created features are better
+than those that are handcrafted! As in many disruptive technologies, this fact has led
+to a change in perspective.

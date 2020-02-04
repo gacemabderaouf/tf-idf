@@ -1,0 +1,12 @@
+Deep learning enables many applications, which invariably consist of taking data in
+some form, such as images or text, and producing data in another form, such as
+labels, numbers, or more text. Taken from this angle, deep learning consists of
+building a system that can transform data from one representation to another. This
+transformation is driven by extracting commonalities from a series of examples that
+demonstrate the desired mapping. The system might note the general shape of a
+dog and the typical colors of a golden retriever, for example. By combining the two
+image properties, the system can correctly map images with a given shape and color
+to the golden-retriever label instead of a black lab (or a tawny tomcat, for that matter). The resulting system can consume broad swaths of similar inputs and produce
+meaningful output for those inputs.
+The first step of this process is converting the input into floating-point numbers,
+as you see in the first step of figure 2.1 (along with many other types of data).

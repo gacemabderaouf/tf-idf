@@ -1,0 +1,17 @@
+Because a network uses floating-point numbers to deal with information, you need a
+way to encode real-world data of the kind you want to process into something that’s
+digestible by a network and then decode the output back to something you can understand and use for a purpose.
+The transformation from one form of data to another is typically learned by a deep
+neural network in stages, which means that you can think of the partially transformed
+data between stages as being a sequence of intermediate representations. For image recognition, early representations can be things (like edge detection) or textures (like fur).
+Deeper representations can capture more-complex structures (like ears, noses, or eyes).
+In general, such intermediate representations are collections of floating-point
+numbers that characterize the input and capture the structure in the data, in a way
+that’s instrumental for describing how inputs are mapped to the outputs of the neural
+network. Such characterization is specific to the task at hand and is learned from relevant examples. These collections of floating-point numbers and their manipulation
+are at the heart of modern AI. It’s important to keep in mind that these intermediate
+representations (such as the ones shown in the second step of figure 2.1) are the
+results of combining the input with the weights of the previous layer of neurons. Each
+intermediate representation is unique to the inputs that preceded it.
+Before you can begin the process of converting data to floating-point input, you
+must have a solid understanding of how PyTorch handles and stores data: as input, as
